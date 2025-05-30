@@ -1,9 +1,7 @@
-import {FlashList} from "@shopify/flash-list";
 import {Link, useNavigation} from "expo-router";
 import {useEffect} from "react";
-import {View, Text, StyleSheet, Pressable, ScrollView} from "react-native";
+import {ScrollView, StyleSheet, Text, View} from "react-native";
 import {useSafeAreaInsets} from "react-native-safe-area-context";
-
 
 export default function IndexScreen() {
   const navigation = useNavigation();
@@ -14,9 +12,7 @@ export default function IndexScreen() {
   //   headerShown: false,
   // });
 
-  function initLogFile() {
-    
-  }
+  function initLogFile() {}
 
   useEffect(() => {
     initLogFile();
@@ -29,7 +25,7 @@ export default function IndexScreen() {
         Expo 组件测试
       </Text>
       <ScrollView style={{flex: 1, marginTop: 20}}>
-        <Link href="/tabs">
+        <Link href="/tabs/main">
           <View style={styles.item_container}>
             <Text>to home</Text>
           </View>
@@ -39,7 +35,7 @@ export default function IndexScreen() {
             <Text>to login</Text>
           </View>
         </Link>
-        <Link href="/modal">
+        <Link href="/screen/modal">
           <View style={styles.item_container}>
             <Text>to modal</Text>
           </View>
@@ -49,7 +45,7 @@ export default function IndexScreen() {
             <Text>to user</Text>
           </View>
         </Link>
-        <Link href="/selectPic">
+        <Link href="/screen/selectPic">
           <View style={styles.item_container}>
             <Text>to selectPic</Text>
           </View>
