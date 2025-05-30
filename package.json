@@ -13,7 +13,6 @@
     "prebuild-a": "expo prebuild --platform android",
     "prebuild-i": "expo prebuild --platform ios"
   },
-  },
   "dependencies": {
     "@expo/vector-icons": "^14.1.0",
     "@react-navigation/bottom-tabs": "^7.3.10",
