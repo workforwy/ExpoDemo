@@ -5,14 +5,14 @@ const config: ExpoConfig = {
   slug: "ExpoDemo",
   version: "1.0.0",
   orientation: "portrait",
-  icon: "./assets/images/1024.png",
+  icon: "./assets/images/icon.png",
   scheme: "expodemo",
   userInterfaceStyle: "automatic",
   newArchEnabled: true,
   splash: {
-    image: "./assets/images/splash.png",
+    image: "./assets/images/splash-icon.png",
     resizeMode: "cover",
-    backgroundColor: "#162326",
+    backgroundColor: "#ffffff",
   },
   ios: {
     supportsTablet: true,
@@ -36,9 +36,9 @@ const config: ExpoConfig = {
     [
       "expo-splash-screen",
       {
-        image: "./assets/images/splash.png",
+        image: "./assets/images/splash-icon.png",
         resizeMode: "cover",
-        backgroundColor: "#162326",
+        backgroundColor: "#ffffff",
       },
     ],
   ],
