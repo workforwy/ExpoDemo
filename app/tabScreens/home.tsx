@@ -3,10 +3,10 @@ import {useEffect, useReducer} from "react";
 import {Pressable, StyleSheet, Text, View} from "react-native";
 import {Shape} from "./components/Shape";
 
-export default function HomeScreen(props: any) {
+export default function HomeScreen() {
   const navigation = useNavigation();
   const [visible, toggle] = useReducer((s) => !s, true);
-  const [num, addNum] = useReducer((s) => s * 2, 2);
+  const [num, addNum] = useReducer((s) => s + 1, 2);
 
   useEffect(() => {}, [navigation]);
 
@@ -19,7 +19,7 @@ export default function HomeScreen(props: any) {
           </Shape>
         )}
       </Pressable>
-      <Pressable onPress={addNum} style={styles.container}>
+      <Pressable onPress={addNum} style={styles.container2}>
         <Text>{num}</Text>
       </Pressable>
     </View>
@@ -44,5 +44,12 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     flexDirection: "row",
     backgroundColor: "#9c1aff",
+  },
+  container2: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    flexDirection: "row",
+    backgroundColor: "#234244",
   },
 });

@@ -11,7 +11,7 @@ export default function IndexScreen() {
       {id: 1, name: "to (tabs)", href: "/(tabs)"},
       {id: 2, name: "to tabScreens/home", href: "/tabScreens/home"},
       {id: 3, name: "to tabScreens/main", href: "/tabScreens/main"},
-      {id: 4, name: "to login", href: "/login"},
+      {id: 4, name: "to login", href: "/login/login"},
       {id: 6, name: "to user", href: "/drawer"},
       {id: 5, name: "to screen/modal", href: "/screen/modal"},
       {id: 7, name: "to screen/selectPic", href: "/screen/selectPic"},

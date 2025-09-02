@@ -9,7 +9,7 @@ export default function MeScreen() {
         alignItems: "center",
       }}
     >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
+      <Text>我的</Text>
     </View>
   );
 }

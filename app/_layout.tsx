@@ -18,7 +18,7 @@ export default function RootLayout() {
 
   return (
     <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-      <StatusBar style="auto" animated hidden={false} />
+      <StatusBar style="auto" animated />
       <Stack
         screenOptions={{
           headerShown: false,

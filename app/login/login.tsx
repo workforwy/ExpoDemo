@@ -1,10 +1,8 @@
 import {Entypo} from "@expo/vector-icons";
-import {Link, useNavigation} from "expo-router";
+import {Link} from "expo-router";
 import {Text, View} from "react-native";
 
-export default function RegisterScreen() {
-  const navigation = useNavigation();
-
+export default function LoginScreen() {
   return (
     <View
       style={{
@@ -13,9 +11,10 @@ export default function RegisterScreen() {
         alignItems: "center",
       }}
     >
-      <Text>这里是draw页面</Text>
+      <Text>这里是页面</Text>
+
       <Link
-        href={"/login/login"}
+        href={"/login/register"}
         style={{
           backgroundColor: "blue",
           padding: 10,
@@ -23,7 +22,7 @@ export default function RegisterScreen() {
           marginTop: 20,
         }}
       >
-        <Entypo name="arrow-left" size={24} color="white" />
+        <Entypo name="home" size={24} color="white" />
       </Link>
     </View>
   );
