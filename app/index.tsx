@@ -1,56 +1,45 @@
-import {Link, useNavigation} from "expo-router";
-import {useEffect} from "react";
-import {ScrollView, StyleSheet, Text, View} from "react-native";
+import {Href, Link} from "expo-router";
+import {useCallback, useMemo} from "react";
+import {FlatList, Pressable, StyleSheet, Text, View} from "react-native";
 import {useSafeAreaInsets} from "react-native-safe-area-context";
 
 export default function IndexScreen() {
-  const navigation = useNavigation();
-
   const insets = useSafeAreaInsets();
 
-  // navigation.setOptions({
-  //   headerShown: false,
-  // });
+  const data = useMemo<{id: number; name: string; href: Href}[]>(
+    () => [
+      {id: 1, name: "to (tabs)", href: "/(tabs)"},
+      {id: 2, name: "to tabScreens/home", href: "/tabScreens/home"},
+      {id: 3, name: "to tabScreens/main", href: "/tabScreens/main"},
+      {id: 4, name: "to login", href: "/login"},
+      {id: 6, name: "to user", href: "/drawer"},
+      {id: 5, name: "to screen/modal", href: "/screen/modal"},
+      {id: 7, name: "to screen/selectPic", href: "/screen/selectPic"},
+    ],
+    []
+  );
 
-  function initLogFile() {}
-
-  useEffect(() => {
-    initLogFile();
-    return () => {};
-  }, []);
-
+  const renderItem = useCallback(
+    ({item}: {item: {id: number; name: string; href: Href}}) => (
+      <Link href={item.href} asChild>
+        <Pressable style={styles.item_container}>
+          <Text style={styles.item_text}>{item.name}</Text>
+        </Pressable>
+      </Link>
+    ),
+    []
+  );
   return (
     <View style={styles.container}>
       <Text style={{fontSize: 20, marginTop: insets.top, textAlign: "center"}}>
         Expo 组件测试
       </Text>
-      <ScrollView style={{flex: 1, marginTop: 20}}>
-        <Link href="/tabs/main">
-          <View style={styles.item_container}>
-            <Text>to home</Text>
-          </View>
-        </Link>
-        <Link href="/login">
-          <View style={styles.item_container}>
-            <Text>to login</Text>
-          </View>
-        </Link>
-        <Link href="/screen/modal">
-          <View style={styles.item_container}>
-            <Text>to modal</Text>
-          </View>
-        </Link>
-        <Link href="/drawer">
-          <View style={styles.item_container}>
-            <Text>to user</Text>
-          </View>
-        </Link>
-        <Link href="/screen/selectPic">
-          <View style={styles.item_container}>
-            <Text>to selectPic</Text>
-          </View>
-        </Link>
-      </ScrollView>
+      <FlatList
+        style={{flex: 1, marginTop: 20}}
+        data={data}
+        keyExtractor={(item) => item.id.toString()}
+        renderItem={renderItem}
+      />
     </View>
   );
 }
@@ -62,8 +51,13 @@ const styles = StyleSheet.create({
   item_container: {
     backgroundColor: "#b9b9b9",
     justifyContent: "center",
-    padding: 10,
-    margin: 10,
     alignItems: "center",
+    height: 50,
+    width: "100%",
+    borderRadius: 10,
+    marginBottom: 10,
+  },
+  item_text: {
+    fontSize: 20,
   },
 });

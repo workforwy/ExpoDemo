@@ -1,6 +1,6 @@
 import {Link, router} from "expo-router";
 import {StatusBar} from "expo-status-bar";
-import {Platform, Text, View} from "react-native";
+import {Platform, View} from "react-native";
 
 export default function ModalScreen() {
   const isPresented = router.canGoBack();

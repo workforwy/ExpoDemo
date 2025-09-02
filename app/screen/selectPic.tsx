@@ -1,7 +1,5 @@
-import {Link, router} from "expo-router";
-import {StatusBar} from "expo-status-bar";
-import {Platform, Pressable, Text, View} from "react-native";
 import * as ImagePicker from "expo-image-picker";
+import {Pressable, Text, View} from "react-native";
 
 export default function SelectPic() {
   const pickImageAsync = async () => {

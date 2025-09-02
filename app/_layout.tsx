@@ -4,8 +4,6 @@ import {useFonts} from "expo-font";
 import {Stack} from "expo-router";
 import {StatusBar} from "expo-status-bar";
 import "react-native-reanimated";
-import ComTitle from "./components/ComTitle";
-import LeftBtn from "./components/LeftBtn";
 
 export default function RootLayout() {
   const colorScheme = useColorScheme();
@@ -20,38 +18,14 @@ export default function RootLayout() {
 
   return (
     <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
+      <StatusBar style="auto" animated hidden={false} />
       <Stack
         screenOptions={{
-          headerLeft: (props) => {
-            return <LeftBtn />;
-          },
-          headerTitle: (props: any) => {
-            return <ComTitle props={props} />;
-          },
+          headerShown: false,
         }}
       >
-        <Stack.Screen name="(tabs)" options={{headerShown: false}} />
         <Stack.Screen name="+not-found" />
-        <Stack.Screen
-          name="drawer"
-          options={{
-            headerShown: false,
-          }}
-        />
-        <Stack.Screen
-          name="login"
-          options={{
-            headerShown: false,
-          }}
-        />
-        {/* <Stack.Screen
-          name="modal"
-          options={{
-            presentation: "formSheet",
-          }}
-        /> */}
       </Stack>
-      <StatusBar style="auto" />
     </ThemeProvider>
   );
 }

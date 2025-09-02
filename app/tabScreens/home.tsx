@@ -1,43 +1,14 @@
-import {Entypo} from "@expo/vector-icons";
-import {Link, Slot, useNavigation} from "expo-router";
-import {MotiView} from "moti";
+import {useNavigation} from "expo-router";
 import {useEffect, useReducer} from "react";
 import {Pressable, StyleSheet, Text, View} from "react-native";
-import LogUtils from "../utils/logUtils";
-import {log} from "loglevel";
+import {Shape} from "./components/Shape";
 
-function Shape(props: any) {
-  return (
-    <MotiView
-      from={{
-        opacity: 1,
-        scale: 0.5,
-      }}
-      animate={{
-        opacity: 0.5,
-        scale: 1,
-      }}
-      transition={{
-        type: "timing",
-      }}
-      style={styles.shape}
-    >
-      {props.children}
-    </MotiView>
-  );
-}
-
-export default function homScreen(props: any) {
+export default function HomeScreen(props: any) {
   const navigation = useNavigation();
-  useEffect(() => {}, [navigation]);
-
   const [visible, toggle] = useReducer((s) => !s, true);
-
   const [num, addNum] = useReducer((s) => s * 2, 2);
 
-  function handlePress() {}
-
-  LogUtils.log("Home Screen Rendered");
+  useEffect(() => {}, [navigation]);
 
   return (
     <View style={styles.contanier}>
