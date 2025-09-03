@@ -2,7 +2,7 @@ import {MotiView} from "moti";
 import React from "react";
 import {StyleSheet} from "react-native";
 
-export function Shape({children}: {children: React.ReactNode}) {
+export default function Shape({children}: {children: React.ReactNode}) {
   return (
     <MotiView
       from={{
