@@ -1,14 +1,9 @@
-import {useNavigation} from "expo-router";
-import {useEffect, useReducer} from "react";
+import {useReducer} from "react";
 import {Pressable, StyleSheet, Text, View} from "react-native";
-import {Shape} from "./components/Shape";
+import Shape from "../components/Shape";
 
 export default function HomeScreen() {
-  const navigation = useNavigation();
   const [visible, toggle] = useReducer((s) => !s, true);
-  const [num, addNum] = useReducer((s) => s + 1, 2);
-
-  useEffect(() => {}, [navigation]);
 
   return (
     <View style={styles.contanier}>
@@ -18,9 +13,6 @@ export default function HomeScreen() {
             <Text style={{fontSize: 20, color: "white"}}>Home Screen</Text>
           </Shape>
         )}
-      </Pressable>
-      <Pressable onPress={addNum} style={styles.container2}>
-        <Text>{num}</Text>
       </Pressable>
     </View>
   );
