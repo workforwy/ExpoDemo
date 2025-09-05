@@ -9,12 +9,12 @@ export default function IndexScreen() {
   const data = useMemo<{id: number; name: string; href: Href}[]>(
     () => [
       {id: 1, name: "to (tabs)", href: "/(tabs)"},
-      {id: 2, name: "to tabScreens/home", href: "/tabScreens/home"},
-      {id: 3, name: "to tabScreens/main", href: "/tabScreens/main"},
+      {id: 2, name: "to tab2/home", href: "/tab2/home"},
+      {id: 3, name: "to tab2/main", href: "/tab2/me"},
       {id: 4, name: "to login", href: "/login/login"},
       {id: 6, name: "to user", href: "/drawer"},
-      {id: 5, name: "to screen/modal", href: "/screen/modal"},
-      {id: 7, name: "to screen/selectPic", href: "/screen/selectPic"},
+      {id: 5, name: "to common/modal", href: "/common/modal"},
+      {id: 7, name: "to common/selectPic", href: "/common/selectPic"},
     ],
     []
   );

@@ -4,7 +4,7 @@ import {Drawer} from "expo-router/drawer";
 export default function Layout() {
   return (
     <GestureHandlerRootView style={{flex: 1}}>
-      <Drawer screenOptions={{}}>
+      <Drawer screenOptions={{headerShown: false}}>
         <Drawer.Screen
           name="index" // This is the name of the page and must match the url from root
           options={{

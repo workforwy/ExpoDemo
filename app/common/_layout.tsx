@@ -8,15 +8,15 @@ export default function RootLayout() {
       }}
     >
       <Stack.Screen
-        name="login"
+        name="modal"
         options={{
-          title: "登录",
+          title: "弹窗",
         }}
       />
       <Stack.Screen
-        name="register"
+        name="selectPic"
         options={{
-          title: "注册",
+          title: "选择图片",
         }}
       />
     </Stack>

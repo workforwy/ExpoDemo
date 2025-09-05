@@ -49,7 +49,7 @@ export default function TabLayout() {
         name="home"
         options={{
           title: "首页",
-          href: "/tabScreens/home",
+          href: "/tab2/home",
           tabBarIcon: ({color}) => (
             <FontAwesome size={28} name="home" color={color} />
           ),
@@ -63,7 +63,7 @@ export default function TabLayout() {
             <FontAwesome size={28} name="video-camera" color={color} />
           ),
           href: {
-            pathname: "/tabScreens/main",
+            pathname: "/tab2/main",
             params: {id: 1},
           },
         }}
@@ -76,8 +76,19 @@ export default function TabLayout() {
             <FontAwesome size={28} name="user" color={color} />
           ),
           href: {
-            pathname: "/tabScreens/main",
-            params: {id: 1},
+            pathname: "/tab2/me",
+          },
+        }}
+      />
+      <Tabs.Screen
+        name="notification"
+        options={{
+          title: "通知",
+          tabBarIcon: ({color}) => (
+            <FontAwesome size={28} name="bell" color={color} />
+          ),
+          href: {
+            pathname: "/tab2/notification",
           },
         }}
       />
