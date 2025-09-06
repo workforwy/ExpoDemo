@@ -1,6 +1,6 @@
 {
   "name": "expodemo",
-  "main": "src/index.js",
+  "main": "src/App.ts",
   "version": "1.0.0",
   "scripts": {
     "start": "expo start",
