@@ -1,4 +1,4 @@
-import {useColorScheme} from "@/hooks/useColorScheme";
+import {useColorScheme} from "@/src/hooks/useColorScheme";
 import {DarkTheme, DefaultTheme, ThemeProvider} from "@react-navigation/native";
 import {useFonts} from "expo-font";
 import {Stack} from "expo-router";
@@ -8,7 +8,7 @@ import "react-native-reanimated";
 export default function RootLayout() {
   const colorScheme = useColorScheme();
   const [loaded] = useFonts({
-    SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
+    SpaceMono: require("../../assets/fonts/SpaceMono-Regular.ttf"),
   });
 
   if (!loaded) {

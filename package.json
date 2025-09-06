@@ -1,6 +1,6 @@
 {
   "name": "expodemo",
-  "main": "expo-router/entry",
+  "main": "src/index.js",
   "version": "1.0.0",
   "scripts": {
     "start": "expo start",
@@ -11,7 +11,9 @@
     "lint": "expo lint",
     "prebuild": "expo prebuild",
     "prebuild-a": "expo prebuild --platform android",
-    "prebuild-i": "expo prebuild --platform ios"
+    "prebuild-i": "expo prebuild --platform ios",
+    "build-a": "eas build -p android",
+    "build-i": "eas build -p ios"
   },
   "dependencies": {
     "@expo/vector-icons": "^14.1.0",
