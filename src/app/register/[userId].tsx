@@ -1,9 +1,9 @@
 import {Entypo} from "@expo/vector-icons";
-import {Link, useNavigation} from "expo-router";
+import {Link, useLocalSearchParams} from "expo-router";
 import {Text, View} from "react-native";
 
 export default function RegisterScreen() {
-  const navigation = useNavigation();
+  const data = useLocalSearchParams();
 
   return (
     <View
@@ -14,6 +14,7 @@ export default function RegisterScreen() {
       }}
     >
       <Text>这里是draw页面</Text>
+      <Text>data: {JSON.stringify(data?.userId)}</Text>
       <Link
         href={"/login/login"}
         style={{

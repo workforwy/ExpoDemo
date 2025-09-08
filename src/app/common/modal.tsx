@@ -1,6 +1,6 @@
 import {Link, router} from "expo-router";
 import {StatusBar} from "expo-status-bar";
-import {Platform, View} from "react-native";
+import {Platform, Text, View} from "react-native";
 
 export default function ModalScreen() {
   const isPresented = router.canGoBack();
@@ -13,6 +13,7 @@ export default function ModalScreen() {
       {/* Native modals have dark backgrounds on iOS. Set the status bar to light content and add a fallback for other platforms with auto. */}
 
       <StatusBar style={Platform.OS === "ios" ? "light" : "auto"} />
+      <Text>This is a modal screen</Text>
     </View>
   );
 }

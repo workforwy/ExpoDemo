@@ -1,4 +1,4 @@
-import {Stack, useNavigation} from "expo-router";
+import {Stack} from "expo-router";
 
 export default function RootLayout() {
   return (
@@ -11,6 +11,7 @@ export default function RootLayout() {
         name="modal"
         options={{
           title: "弹窗",
+          presentation: "modal",
         }}
       />
       <Stack.Screen

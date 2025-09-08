@@ -1,6 +1,4 @@
-import {Entypo} from "@expo/vector-icons";
-import {useNavigation} from "expo-router";
-import {Pressable, Text, View} from "react-native";
+import {Text, View} from "react-native";
 
 function ComTitle({props}: any) {
   return (

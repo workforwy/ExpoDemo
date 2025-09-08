@@ -1,6 +1,6 @@
 import {useReducer} from "react";
 import {Pressable, StyleSheet, Text, View} from "react-native";
-import Shape from "../components/Shape";
+import Shape from "../../components/Shape";
 
 export default function HomeScreen() {
   const [visible, toggle] = useReducer((s) => !s, true);

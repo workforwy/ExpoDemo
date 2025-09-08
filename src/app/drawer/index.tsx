@@ -3,7 +3,7 @@ import {Pressable, StyleSheet, Text} from "react-native";
 export default function homScreen(props: any) {
   return (
     <Pressable style={styles.contanier}>
-      <Text>Home Screen</Text>
+      <Text>Drawer Screen</Text>
     </Pressable>
   );
 }

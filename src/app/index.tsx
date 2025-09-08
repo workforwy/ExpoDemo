@@ -15,6 +15,8 @@ export default function IndexScreen() {
       {id: 6, name: "to user", href: "/drawer"},
       {id: 5, name: "to common/modal", href: "/common/modal"},
       {id: 7, name: "to common/selectPic", href: "/common/selectPic"},
+      {id: 8, name: "to register", href: `/register/${Math.random()}`},
+      {id: 9, name: "to drawer", href: "/drawer"},
     ],
     []
   );
