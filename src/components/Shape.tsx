@@ -1,4 +1,4 @@
-import {MotiView} from "moti";
+import {View as MotiView} from "moti/build/components/view";
 import React from "react";
 import {StyleSheet} from "react-native";
 
