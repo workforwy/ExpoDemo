@@ -14,7 +14,7 @@ export default function LoginScreen() {
       <Text>这里是页面</Text>
 
       <Link
-        href={"/login/register"}
+        href={"/register/demo"}
         style={{
           backgroundColor: "blue",
           padding: 10,

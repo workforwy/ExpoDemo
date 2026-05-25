@@ -1,6 +1,4 @@
-import {ExpoConfig} from "expo/config";
-
-const config: ExpoConfig = {
+const config = {
   name: "ExpoDemo",
   slug: "ExpoDemo",
   version: "1.0.0",
@@ -23,7 +21,6 @@ const config: ExpoConfig = {
       foregroundImage: "./src/assets/images/adaptive-icon.png",
       backgroundColor: "#ffffff",
     },
-    edgeToEdgeEnabled: true,
     package: "com.erik2025.ExpoDemo",
   },
   web: {
@@ -34,6 +31,8 @@ const config: ExpoConfig = {
   plugins: [
     "expo-router",
     "expo-font",
+    "expo-image",
+    "expo-status-bar",
     "expo-web-browser",
     [
       "expo-splash-screen",
